@@ -5,12 +5,35 @@ The 7-billion-parameter flagship model was distilled into a family of smaller Vi
 
 Sadly, only one ImageNet-1k (IN1k) linear classification probe was released: the one for the 7B model.
 
-Here, we provide IN1k probes for the following backbones:
-- `facebook/dinov3-vitb16-pretrain-lvd1689m`:
-  - [Official backbone](https://huggingface.co/facebook/dinov3-vitb16-pretrain-lvd1689m)
-  - [512x512 IN1k probe](https://huggingface.co/yberreby/dinov3-vitb16-lvd1689m-in1k-512x512-linear-clf-probe)
+## Released Probes
+
+- **ViT-S/16** @ 512×512
+  - Base: [`facebook/dinov3-vits16-pretrain-lvd1689m`](https://huggingface.co/facebook/dinov3-vits16-pretrain-lvd1689m)
+  - Probe: [`yberreby/dinov3-vits16-lvd1689m-in1k-512x512-linear-clf-probe`](https://huggingface.co/yberreby/dinov3-vits16-lvd1689m-in1k-512x512-linear-clf-probe)
+
+- **ViT-B/16** @ 512×512
+  - Base: [`facebook/dinov3-vitb16-pretrain-lvd1689m`](https://huggingface.co/facebook/dinov3-vitb16-pretrain-lvd1689m)
+  - Probe: [`yberreby/dinov3-vitb16-lvd1689m-in1k-512x512-linear-clf-probe`](https://huggingface.co/yberreby/dinov3-vitb16-lvd1689m-in1k-512x512-linear-clf-probe)
+
+- **ViT-L/16** @ 512×512
+  - Base: [`facebook/dinov3-vitl16-pretrain-lvd1689m`](https://huggingface.co/facebook/dinov3-vitl16-pretrain-lvd1689m)
+  - Probe: [`yberreby/dinov3-vitl16-lvd1689m-in1k-512x512-linear-clf-probe`](https://huggingface.co/yberreby/dinov3-vitl16-lvd1689m-in1k-512x512-linear-clf-probe)
 
 More probes will be released over time; watch this repository and/or [the corresponding HuggingFace Collection](https://huggingface.co/collections/yberreby/dinov3-imagenet-1k-probes).
+
+## Performance
+
+**All of our probes (512×512) match or even exceed the IN-ReAL accuracy reported by the DINOv3 authors.**
+
+| Probe | IN-ReAL top-1 (official / ours) |
+|-------|--------------------------------|
+| [dinov3-vits16-lvd1689m-in1k-512x512-linear-clf-probe](https://huggingface.co/yberreby/dinov3-vits16-lvd1689m-in1k-512x512-linear-clf-probe) | 87.0% / **87.05%** |
+| [dinov3-vitb16-lvd1689m-in1k-512x512-linear-clf-probe](https://huggingface.co/yberreby/dinov3-vitb16-lvd1689m-in1k-512x512-linear-clf-probe) | 89.3% / **89.54%** |
+| [dinov3-vitl16-lvd1689m-in1k-512x512-linear-clf-probe](https://huggingface.co/yberreby/dinov3-vitl16-lvd1689m-in1k-512x512-linear-clf-probe) | 90.2% / **90.23%** |
+| ViT-S+/16 (coming soon) | 88.0% / — |
+| ViT-H+/16 (coming soon) | 90.3% / — |
+
+The accuracy of the latest probes uploaded on the HF Hub can be queried using `uv run print_metrics.py`.
 
 ## Usage
 
