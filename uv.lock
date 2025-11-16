@@ -114,20 +114,22 @@ wheels = [
 ]
 
 [[package]]
-name = "dinov3-imagenet-1k-probes"
+name = "dinov3-probes"
 version = "0.1.0"
-source = { virtual = "." }
+source = { editable = "." }
+dependencies = [
+    { name = "huggingface-hub" },
+    { name = "torch" },
+]
 
 [package.dev-dependencies]
 dev = [
     { name = "accelerate" },
-    { name = "huggingface-hub" },
     { name = "ipython" },
     { name = "numpy" },
     { name = "pillow" },
     { name = "safetensors" },
     { name = "timm" },
-    { name = "torch" },
     { name = "torchvision" },
     { name = "transformers" },
     { name = "tyro" },
@@ -135,17 +137,19 @@ dev = [
 ]
 
 [package.metadata]
+requires-dist = [
+    { name = "huggingface-hub", specifier = ">=0.36.0" },
+    { name = "torch", specifier = ">=2.9.1" },
+]
 
 [package.metadata.requires-dev]
 dev = [
     { name = "accelerate", specifier = ">=1.11.0" },
-    { name = "huggingface-hub", specifier = ">=0.36.0" },
     { name = "ipython", specifier = ">=9.7.0" },
     { name = "numpy", specifier = ">=2.3.4" },
     { name = "pillow", specifier = ">=12.0.0" },
     { name = "safetensors", specifier = ">=0.6.2" },
     { name = "timm", specifier = ">=1.0.22" },
-    { name = "torch", specifier = ">=2.9.1" },
     { name = "torchvision", specifier = ">=0.24.1" },
     { name = "transformers", specifier = ">=4.57.1" },
     { name = "tyro", specifier = ">=0.9.35" },
