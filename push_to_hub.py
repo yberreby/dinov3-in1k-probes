@@ -6,7 +6,7 @@ from pprint import pprint
 import torch
 import tyro
 
-from dinov3_linear_clf_head import DINOv3LinearClassificationHead
+from dinov3_probes import DINOv3LinearClassificationHead
 
 FILENAME_PATTERN = r"dinov3-(?P<slug>[^-]+)-lvd1689m-in1k-(?P<res>\d+)x\d+-linear-clf-probe\.pt"
 
