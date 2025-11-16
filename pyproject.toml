@@ -5,7 +5,7 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = []
 license = "MIT"
-authors = [{name = "Yohaï-Eliel Berreby", email = "me@yberreby"}]
+authors = [{name = "Yohaï-Eliel Berreby", email = "me@yberreby.com"}]
 
 [dependency-groups]
 dev = [
