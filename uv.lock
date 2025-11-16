@@ -120,6 +120,7 @@ source = { editable = "." }
 dependencies = [
     { name = "huggingface-hub" },
     { name = "numpy" },
+    { name = "safetensors" },
     { name = "torch" },
 ]
 
@@ -141,6 +142,7 @@ dev = [
 requires-dist = [
     { name = "huggingface-hub", specifier = ">=0.36.0" },
     { name = "numpy", specifier = ">=2.3.4" },
+    { name = "safetensors", specifier = ">=0.6.2" },
     { name = "torch", specifier = ">=2.9.1" },
 ]
 
