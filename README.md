@@ -35,7 +35,11 @@ Here, we report both.
   - Base: [`facebook/dinov3-vitl16-pretrain-lvd1689m`](https://huggingface.co/facebook/dinov3-vitl16-pretrain-lvd1689m)
   - Probe: [`yberreby/dinov3-vitl16-lvd1689m-in1k-512x512-linear-clf-probe`](https://huggingface.co/yberreby/dinov3-vitl16-lvd1689m-in1k-512x512-linear-clf-probe)
 
-More probes will be released over time; watch this repository and/or [the corresponding HuggingFace Collection](https://huggingface.co/collections/yberreby/dinov3-imagenet-1k-probes).
+- **ViT-H+/16** @ 512×512
+  - Base: [`facebook/dinov3-vith16plus-pretrain-lvd1689m`](https://huggingface.co/facebook/dinov3-vith16plus-pretrain-lvd1689m)
+  - Probe: [`yberreby/dinov3-vith16plus-lvd1689m-in1k-512x512-linear-clf-probe`](https://huggingface.co/yberreby/dinov3-vith16plus-lvd1689m-in1k-512x512-linear-clf-probe)
+
+See [the corresponding HuggingFace Collection](https://huggingface.co/collections/yberreby/dinov3-imagenet-1k-probes).
 
 ## Performance
 
@@ -45,7 +49,7 @@ More probes will be released over time; watch this repository and/or [the corres
 | [ViT-S+/16](https://huggingface.co/yberreby/dinov3-vits16plus-lvd1689m-in1k-512x512-linear-clf-probe) | 88.0% / **88.03%** | 82.60% |
 | [ViT-B/16](https://huggingface.co/yberreby/dinov3-vitb16-lvd1689m-in1k-512x512-linear-clf-probe) | 89.3% / **89.54%** | 85.00% |
 | [ViT-L/16](https://huggingface.co/yberreby/dinov3-vitl16-lvd1689m-in1k-512x512-linear-clf-probe) | 90.2% / **90.42%** | 87.44% |
-| ViT-H+/16 (coming soon) | 90.3% / — |  -- |
+| [ViT-H+/16](https://huggingface.co/yberreby/dinov3-vith16plus-lvd1689m-in1k-512x512-linear-clf-probe) | 90.3% / **90.30%** | 87.60% |
 
 The accuracy of the latest probes uploaded on the HF Hub can be queried using `uv run print_metrics.py`.
 
