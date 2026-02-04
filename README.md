@@ -57,64 +57,29 @@ The accuracy of the latest probes uploaded on the HF Hub can be queried using `u
 
 We recommend using [`uv`](https://docs.astral.sh/uv/).
 
-### Using `from_pretrained`
+### Quick demo
 
-```
-❯ uvx --with 'https://github.com/yberreby/dinov3-in1k-probes.git' ipython
-⠙ Resolving dependencies...
-    Updated https://github.com/yberreby/dinov3-in1k-probes.git (a90e04e58723a63f4488591418dec87391a14346)
-      Built dinov3-in1k-probes @ git+https://github.com/yberreby/dinov3-in1k-probes.git@a90e04e58723a63f4488591418dec87391a14346
-Installed 44 packages in 482ms
-Python 3.12.11 (main, Jul  8 2025, 20:41:49) [Clang 20.1.4 ]
-Type 'copyright', 'credits' or 'license' for more information
-IPython 9.7.0 -- An enhanced Interactive Python. Type '?' for help.
-Tip: You can find how to type a LaTeX symbol by back-completing it, eg `\θ<tab>` will expand to `\theta`.
-
-In [1]:
-
-In [1]: from dinov3_in1k_probes import DINOv3LinearClassificationHead
-
-In [2]: probe = DINOv3LinearClassificationHead.from_pretrained("yberreby/dinov3-vitb16-lvd1689m-in1k-512x512-linear-clf-probe")
-
-In [3]: probe
-Out[3]: DINOv3LinearClassificationHead(in_features=768, out_features=1000, bias=True)
-
-In [4]:
-```
-
-### Detailed example
+Run the demo directly (no clone needed):
 
 ```bash
-git clone https://github.com/yberreby/dinov3-in1k-probes.git
-cd dinov3-in1k-probes
-uv run demo.py # or `uv run ipython -i demo.py` for a REPL
+uv run https://raw.githubusercontent.com/yberreby/dinov3-in1k-probes/main/demo.py
 ```
 
-Example:
+### Using `from_pretrained`
+
+```python
+from dinov3_in1k_probes import DINOv3LinearClassificationHead
+
+probe = DINOv3LinearClassificationHead.from_pretrained(
+    "yberreby/dinov3-vitb16-lvd1689m-in1k-512x512-linear-clf-probe"
+)
+# DINOv3LinearClassificationHead(in_features=768, out_features=1000, bias=True)
 ```
-❯ uv run python demo.py
-Importing dependencies... done
-Loading linear probe: vitb16 @ 512x512... done
-  IN1k val top-1: 85.00%
-  IN1k-ReAL top-1: 89.54%
 
-Loading DINOv3 model: facebook/dinov3-vitb16-pretrain-lvd1689m... done
-  Patch size: 16
-  Register tokens: 4
+To get an interactive shell with the package:
 
-Processing image: http://images.cocodataset.org/val2017/000000039769.jpg... done
-  Image size: 640x480
-  Preprocessed: (1, 3, 224, 224)
-
-Running inference... done
-
-
-Top-5 predictions:
-  1. tabby, tabby cat                         48.01%
-  2. Egyptian cat                             18.62%
-  3. tiger cat                                10.51%
-  4. remote control, remote                    6.67%
-  5. mouse, computer mouse                     1.58%
+```bash
+uvx --with 'git+https://github.com/yberreby/dinov3-in1k-probes.git' ipython
 ```
 
 
