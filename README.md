@@ -60,10 +60,10 @@ We recommend using [`uv`](https://docs.astral.sh/uv/).
 ### Using `from_pretrained`
 
 ```
-❯ uvx --with 'https://github.com/yberreby/dinov3-probes.git' ipython
+❯ uvx --with 'https://github.com/yberreby/dinov3-in1k-probes.git' ipython
 ⠙ Resolving dependencies...
-    Updated https://github.com/yberreby/dinov3-probes.git (a90e04e58723a63f4488591418dec87391a14346)
-      Built dinov3-probes @ git+https://github.com/yberreby/dinov3-probes.git@a90e04e58723a63f4488591418dec87391a14346
+    Updated https://github.com/yberreby/dinov3-in1k-probes.git (a90e04e58723a63f4488591418dec87391a14346)
+      Built dinov3-in1k-probes @ git+https://github.com/yberreby/dinov3-in1k-probes.git@a90e04e58723a63f4488591418dec87391a14346
 Installed 44 packages in 482ms
 Python 3.12.11 (main, Jul  8 2025, 20:41:49) [Clang 20.1.4 ]
 Type 'copyright', 'credits' or 'license' for more information
@@ -72,7 +72,7 @@ Tip: You can find how to type a LaTeX symbol by back-completing it, eg `\θ<tab>
 
 In [1]:
 
-In [1]: from dinov3_probes import DINOv3LinearClassificationHead
+In [1]: from dinov3_in1k_probes import DINOv3LinearClassificationHead
 
 In [2]: probe = DINOv3LinearClassificationHead.from_pretrained("yberreby/dinov3-vitb16-lvd1689m-in1k-512x512-linear-clf-probe")
 
@@ -85,8 +85,8 @@ In [4]:
 ### Detailed example
 
 ```bash
-git clone https://github.com/yberreby/dinov3-probes.git
-cd dinov3-probes
+git clone https://github.com/yberreby/dinov3-in1k-probes.git
+cd dinov3-in1k-probes
 uv run demo.py # or `uv run ipython -i demo.py` for a REPL
 ```
 

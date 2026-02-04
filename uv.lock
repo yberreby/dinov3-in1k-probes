@@ -134,7 +134,7 @@ wheels = [
 ]
 
 [[package]]
-name = "dinov3-probes"
+name = "dinov3-in1k-probes"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
