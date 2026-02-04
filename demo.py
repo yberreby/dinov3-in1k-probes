@@ -2,9 +2,8 @@
 # requires-python = ">=3.11"
 # dependencies = [
 #     "dinov3-in1k-probes @ git+https://github.com/yberreby/dinov3-in1k-probes.git",
-#     "timm",
-#     "torch",
-#     "transformers",
+#     "timm>=1.0",
+#     "transformers>=4.50",
 # ]
 # ///
 """Demo: DINOv3 ImageNet-1k classification with pretrained linear probe."""

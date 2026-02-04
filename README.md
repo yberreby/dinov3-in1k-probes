@@ -51,7 +51,7 @@ See [the corresponding HuggingFace Collection](https://huggingface.co/collection
 | [ViT-L/16](https://huggingface.co/yberreby/dinov3-vitl16-lvd1689m-in1k-512x512-linear-clf-probe) | 90.2% / **90.42%** | 87.44% |
 | [ViT-H+/16](https://huggingface.co/yberreby/dinov3-vith16plus-lvd1689m-in1k-512x512-linear-clf-probe) | 90.3% / **90.31%** | 87.65% |
 
-The accuracy of the latest probes uploaded on the HF Hub can be queried using `uv run --group dev print_metrics.py`.
+The accuracy of the latest probes uploaded on the HF Hub can be queried using `uv run print_metrics.py`.
 
 ## Usage
 
@@ -91,5 +91,5 @@ It will auto-detect the model name, image size, and other metadata.
 Example usage:
 
 ```bash
-uv run --group dev push_to_hub.py --checkpoint dinov3-vitb16-lvd1689m-in1k-512x512-linear-clf-probe.pt
+uv run push_to_hub.py --checkpoint dinov3-vitb16-lvd1689m-in1k-512x512-linear-clf-probe.pt
 ```
